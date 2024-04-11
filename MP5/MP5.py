@@ -72,6 +72,3 @@ makeCloud([130,157], 50, 50)
 animate(plane,birdLayer,secondBirdLayer)
 
 
-#for i in range(400):
-#    time.sleep(0.01)
-#    birdLayer.move(-1,0)
