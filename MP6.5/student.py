@@ -41,6 +41,7 @@ class Student:
             return f'Student:{self._stuID} {self._name[0]} {self._name[1]} \nTests Scores: \nTest Average:{self._avg}\n'
         else:
             payload =  f'Student:{self._stuID} {self._name[0]} {self._name[1]}\nTest Scores:'
+            print(len(self._testScores))
             for i in range(len(self._testScores)):
                 payload =  payload + f' {self._testScores[i]}'
             payload = payload + f'\nTest Average:{self._avg:.2f}\n'

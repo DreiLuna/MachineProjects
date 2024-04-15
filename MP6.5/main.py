@@ -4,8 +4,7 @@
 # Drei Luna
 #
 # Description: This script uses class to print out the Name(with student ID),
-# Test scores, and average test score when given a file with that information.
-#
+# Test scores, and average 
 
 from student import Student
 
