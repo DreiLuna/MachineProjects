@@ -75,10 +75,12 @@ def updateTests(roster, stuID):
     for i in range(len(score_list)-1):
        roster[stuID].addTest(score_list[i])
 
+print('Students in Roster:\n')
 classList = getStudent()
 printStudents(classList)
 
 user_input = ' '
+print('You may update any student info, or add a student.\n')
 while(user_input != ''):
     user_input = input('Enter Student ID (<enter> to stop): ')
     if(user_input not in classList):
