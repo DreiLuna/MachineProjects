@@ -5,6 +5,8 @@
 #
 # Description: This script uses class to print out the Name(with student ID),
 # Test scores, and average test score when given a file with that information.
+# Now allows for users to change information in the list of students. For example
+# changing a test score or name.
 #
 
 from student import Student
@@ -45,7 +47,7 @@ def printStudents(roster):
     # Prints the information for each Student object in roster... including studentID,
     # firstName, lastName, testScores, and average for each object.
     #
-    # roster A list of objects from the Student class, each object contains a
+    #\ roster A list of objects from the Student class, each object contains a
     # studentID(str), firstName(str), lastName(str),
     # testScores(list of int value), and average (float).
     #
@@ -79,13 +81,14 @@ print('Students in Roster:\n')
 classList = getStudent()
 printStudents(classList)
 
-user_input = ' '
 print('You may update any student info, or add a student.\n')
+user_input = input('Enter Student ID (<enter> to stop): ')
 while(user_input != ''):
-    user_input = input('Enter Student ID (<enter> to stop): ')
+    
     if(user_input not in classList):
         updateName(classList, user_input)
         updateTests(classList, user_input)
+        print('\nNew Student Added:')
     else:
         print(classList[user_input])
         print('(1) Change the Name')
@@ -96,7 +99,8 @@ while(user_input != ''):
         if(action == '1'):
             updateName(classList, user_input)
         elif(action =='2'):
-            updateTests(classList, user_input) 
-    print()
+            updateTests(classList, user_input)
+        print()
     print(classList[user_input])
+    user_input = input('Enter Student ID (<enter> to stop): ')
         
